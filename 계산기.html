@@ -1,151 +1,43 @@
-<html>    
+<html>
     <head>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <style>
-            body    {
-                background-color:black;
-            }
-            .calculator {
-                background-color:rgb(230,230,230);
-                width: 510px;
-            }
-            .button-xs {
-                width: 44px;
-                height: 34px;
-                line-height: 34px;
-            }
-            .button-xs > i {
-                line-height: 35px;
-            }
-            .button-xs:hover {
-                background-color: rgb(210, 210, 210);
-            }
-            .button-s {
-                width: 36px;
-                height: 38px;
-                line-height: 38px;
-                border-width: 2px;
-                border-style: solid;
-                border-color: transparent
-            }
-            .button-s > i {
-                line-height: 35px;                
-            }
-            .button-s:hover {
-                background-color: rgb(210, 210, 210);
-                border-width: 2px; 
-                border-color:rgb(180, 180, 180);
-            }
-            .button-m {
-                width: 76px;
-                height: 48px;
-                line-height: 48px;
-                border-width: 2px;
-                border-style: solid;
-                border-color: transparent
-            }
-            .button-m:hover:not(.lightgray) {
-                background-color: rgb(210, 210, 210);
-                border-color:rgb(180, 180, 180);
-            }
-            .button-l {
-                width: 119px;
-                height: 81px;
-                line-height: 83px;
-                margin-top: 1px;
-                margin-bottom: 1px;
-                border-width: 2px;
-                border-style: solid;
-                border-color: transparent
-            }
-            .button-l > * {
-                line-height: 83px;
-            }
-            .button-l:hover {
-                background-color: rgb(210, 210, 210);
-                border-color:rgb(180, 180, 180);
-            }
-            .ib {
-                display: inline-block;
-            }
-            .bg-white {
-                background-color: white
-            }
-            .bg-lightgray {
-                background-color: rgb(240,240,240)
-            }
-            .lightgray{
-                color: rgb(190,190,190)
-            }
-            .d-flex {
-                display: flex;
-            }
-            .margin-right-auto {
-                margin-right: auto;
-            }
-            .margin-left-auto {
-                margin-left: auto;
-            }
-            .text-align-right {
-                text-align: right;
-            }
-            .text-align-center {
-                text-align: center;
-            }
-            .f-bold {
-                font-weight: bold;
-            }
-            .f-medium{
-                font-size: 24px;
-            }
-            .f-large{
-                font-size: 48px;
-            }
-            .pr-20 {
-                padding-right: 20px;
-            }
-            .w-80 {
-                width: 80px;
-            }
-            .lh-35 {
-                line-height: 35px;
-            }
-        </style>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./script.js"></script>
     </head>
     <body>
         <div class="calculator">
             <div class="d-flex">
-                <div class= "ib text-align-center lh-35 w-80">계산기</div>
-                <div class=" button-xs text-align-center ib margin-left-auto">_</div>
-                <div class=" button-xs text-align-center ib"><i class="far fa-square"></i></div>
-                <div class=" button-xs text-align-center ib"><i class="fas fa-times"></i></div>
+                <div class="ib text-align-center lh-35 w-80">계산기</div>
+                <div class="button-xs text-align-center ib margin-left-auto">_</div>
+                <div class="button-xs text-align-center ib"><i class="far fa-square"></i></div>
+                <div class="button-xs text-align-center ib"><i class="fas fa-times"></i></div>
             </div>
             <div class="d-flex">
                 <div class="ib button-s text-align-center"><i class="fas fa-bars"></i></div>
-                <div class="ib f-bold f-medium text-align-center w-80 w">표준</div>
+                <div class="ib f-bold f-medium text-align-center w-80">표준</div>
                 <div class="ib button-s text-align-center"><i class="fas fa-vector-square"></i></div>
                 <div class="ib button-s text-align-center margin-left-auto"><i class="far fa-clock"></i></div>
             </div>
             <div class="text-align-right pr-20 lightgray">
                 788 x
             </div>
-            <div class="text-align-right f-bold f-large"> 
+            <div class="text-align-right f-bold f-large pr-20" id="value">
                 0
             </div>
             <div>
-                <div class="f-medium text-align-center ib button-m lightgray">MC</div>
-                <div class="f-medium text-align-center ib button-m lightgray">MR</div>
-                <div class="f-medium text-align-center ib button-m f-bold">M+</div>
-                <div class="f-medium text-align-center ib button-m f-bold">M-</div>
-                <div class="f-medium text-align-center ib button-m f-bold">MS</div>
-                <div class="f-medium text-align-center ib button-m lightgray">M-</div>
+                <div class="text-align-center ib button-m lightgray">MC</div>
+                <div class="text-align-center ib button-m lightgray">MR</div>
+                <div class="text-align-center ib button-m f-bold">M+</div>
+                <div class="text-align-center ib button-m f-bold">M-</div>
+                <div class="text-align-center ib button-m f-bold">MS</div>
+                <div class="text-align-center ib button-m lightgray">M-</div>
             </div>
             <div>
                 <div class="f-medium text-align-center ib button-l bg-lightgray">%</div>
                 <div class="f-medium text-align-center ib button-l bg-lightgray">CE</div>
                 <div class="f-medium text-align-center ib button-l bg-lightgray">C</div>
                 <div class="f-medium text-align-center ib button-l bg-lightgray">
-                    <i class="f-medium fas fa-backspace"></i>
+                    <i class="fas fa-backspace"></i>
                 </div>
             </div>
             <div>
@@ -155,21 +47,21 @@
                 <div class="f-medium text-align-center ib button-l bg-lightgray">÷</div>
             </div>
             <div>
-                <div class="f-medium text-align-center ib button-l bg-white f-bold">7</div>
-                <div class="f-medium text-align-center ib button-l bg-white f-bold">8</div>
-                <div class="f-medium text-align-center ib button-l bg-white f-bold">9</div>
-                <div class="f-medium text-align-center ib button-l bg-lightgray">x</div>
+                <div class="f-medium text-align-center ib button-l bg-white f-bold" onclick="updateValue(7)">7</div>
+                <div class="f-medium text-align-center ib button-l bg-white f-bold" onclick="updateValue(8)">8</div>
+                <div class="f-medium text-align-center ib button-l bg-white f-bold" onclick="updateValue(9)">9</div>
+                <div class="f-medium text-align-center ib button-l bg-lightgray">X</div>
             </div>
             <div>
-                <div class="f-medium text-align-center ib button-l bg-white f-bold">4</div>
-                <div class="f-medium text-align-center ib button-l bg-white f-bold">5</div>
-                <div class="f-medium text-align-center ib button-l bg-white f-bold">6</div>
+                <div class="f-medium text-align-center ib button-l bg-white f-bold" onclick="updateValue(4)">4</div>
+                <div class="f-medium text-align-center ib button-l bg-white f-bold" onclick="updateValue(5)">5</div>
+                <div class="f-medium text-align-center ib button-l bg-white f-bold" onclick="updateValue(6)">6</div>
                 <div class="f-medium text-align-center ib button-l bg-lightgray">-</div>
             </div>
             <div>
-                <div class="f-medium text-align-center ib button-l bg-white f-bold">1</div>
-                <div class="f-medium text-align-center ib button-l bg-white f-bold">2</div>
-                <div class="f-medium text-align-center ib button-l bg-white f-bold">3</div>
+                <div class="f-medium text-align-center ib button-l bg-white f-bold" onclick="updateValue(1)">1</div>
+                <div class="f-medium text-align-center ib button-l bg-white f-bold" onclick="updateValue(2)">2</div>
+                <div class="f-medium text-align-center ib button-l bg-white f-bold" onclick="updateValue(3)">3</div>
                 <div class="f-medium text-align-center ib button-l bg-lightgray">+</div>
             </div>
             <div>
