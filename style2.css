@@ -8,28 +8,39 @@ body{
   background-color: black;
 }
 .calculator{
-  width:330px;
+  width: 330px;
   background-color: rgb(200, 200, 200);
   border: 1px solid;
   padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .calculator form{
   background: rgb(202, 202, 202);
   display: grid;
-  grid-template-columns: repeat(4, 76px);
-  grid-auto-rows: 55px;
-  grid-gap: 5px;
+  grid-template-columns: repeat(6, 46px);
+  grid-auto-rows: 45px;
+  grid-gap: 20px;
+  
 }
 .calculator form input{
-  border: 2px solid transparent
+  border: 2px solid transparent;
 }
 .calculator form input:hover{
   border-color :rgb(180, 180, 180);
   background-color :rgb(210, 210, 210);
 }
-.calculator form .number{
-  background-color: white
-}
 .calculator form input[type="text"]{
-  grid-column: span 4;
+  grid-column: span 6;
+}
+.calculator form .number{
+  background-color: white;
+  width: 65px;
+}
+.calculator form .combine{
+  grid-column: span 3;
+  width: 65px;
+}
+.calculator form .special{
+  grid-column: 5px;
 }
